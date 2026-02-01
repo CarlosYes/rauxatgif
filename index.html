@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html lang=pt-PT>
+<head>
+<title>Radio Amigos Unidos</title>
+<meta name="description" content="RAU" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv=X-UA-Compatible content="IE=Edge"/>
+<meta property="og:title" content="RAU Player" />
+<meta property="og:description" content="RAU" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/nNh98kV.png" sizes="48x48" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/nNh98kV.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/nNh98kV.png" sizes="144x144" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/nNh98kV.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i.imgur.com/nNh98kV.png" sizes="180x180"/>
+<link rel="stylesheet" href="./style.css">
+</div>
+  </head>
+<style>
+  body, html {
+  position: fixed;
+	width: 100%;
+    height: 100%;
+    background: url(https://xatimg.com/image/1mV3HjFEIs2W.gif) center;
+
+  }
+
+    .container {
+ 
+    position: fixed;
+ 
+    width: 100%;
+ 
+    height: 100%;
+ 
+  }
+  video.side-video {
+ 
+    position: fixed;
+ 
+    top: 88px;
+ 
+    width: 300px;
+ 
+    height: 490px;
+ 
+    object-fit: cover;
+ 
+    border-radius: 10px;
+ 
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+ 
+    z-index: 1;
+ 
+  }
+
+  /* Aproximação do centro */
+  .left-video {
+    left: 65px;
+  }
+
+  .right-video {
+    right: 50px;
+  }
+
+  /* Imagem central */
+.center-image {
+  position: fixed;
+  top: 91px;
+  left: 400px; /* posição central */
+  width: 728px; /* espaço entre os 2 videos */
+  height: 489px;
+  border-radius: 22px;
+  opacity: 0;
+  animation: fadeOpacity 30s ease-in-out infinite, glow 5s ease-in-out infinite alternate;
+  box-shadow: 0 0 0px #00ffff;
+}
+
+/* Fade in/out */
+@keyframes fadeOpacity {
+  0%   { opacity: 0; }
+  25%  { opacity: 1; }   /* fade in 5s */
+  75%  { opacity: 1; }   /* rimane visibile 10s */
+  100% { opacity: 0; }   /* fade out 5s */
+}
+
+/* neon */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+  50% { box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+  100% { box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Video Esquerdo -->
+  <video class="side-video left-video" autoplay loop muted playsinline>
+    <source src="https://i.imgur.com/ZCWP1ck.mp4" type="video/mp4" />
+    seu navegador não suporta o vídeo
+  </video>
+
+  <!-- Imagem central -->
+  <img class="center-image" src="https://xatimg.com/image/l8OMc9b2iCPu.png" alt="Imagem trasparente centro" />
+
+  <!-- Video direito -->
+  <video class="side-video right-video" autoplay loop muted playsinline>
+    <source src="https://i.imgur.com/HidBmCn.mp4" type="video/mp4" />
+    seu navegador não suporta o vídeo
+  </video>
+</div>
+
+</body>
+</html>
